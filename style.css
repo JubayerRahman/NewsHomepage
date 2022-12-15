@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+*{
+    margin: 0;padding: 0; box-sizing: border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 96vw;
+    padding: 20px;
+}
+.responsiveMenu{
+    display:none;
+}
+nav ul{
+    display: flex;
+    width: 45%;
+    justify-content: space-between;
+    list-style: none;
+    cursor: pointer;
+}
+nav ul li:hover{
+    color: hsl(5, 85%, 63%);
+    transition: all 0.5s ease-out;
+}
+.menubutton{
+    padding: 2px 5px;
+    font-size: 20px;
+    background-color: white;
+    border: 2px solid rgb(0,0,26);
+    border-radius: 5px;
+    color: rgb(0,0,26);
+    display: none;
+}
+.menubutton:hover{
+    color: hsl(5, 85%, 63%);
+    border: 2px solid hsl(5, 85%, 63%);
+    transition: all 0.5s ease-out;
+}
+main{
+    width: 96vw;
+    padding: 20px;
+}
+/* top Seection */
+.topSection{
+    display: flex;
+    justify-content: space-between;
+}
+.TopLeeft{
+    width: 60vw;
+}
+.desktopImg{
+    width: 100%;
+}
+.MobileImg{
+    display: none;
+}
+.topLefBottomSection{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.topLeftLeftText{
+    width: 100%;
+    font-size: 25px;
+    color: hsl(240, 100%, 5%);
+}
+.topLefRightText{
+    width:100%
+}
+.topLefRightText p{
+    font-size: 18px;
+    line-height: 25px;
+}
+.topLefRightText button{
+    margin-top: 20px;
+    letter-spacing: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: white;
+    padding: 10px;
+    background-color: hsl(5, 85%, 63%);
+    border: 2px solid hsl(5, 85%, 63%);
+}
+.topLefRightText button:hover{
+    background-color: hsl(240, 100%, 5%);
+    border: 2px solid hsl(240, 100%, 5%);
+}
+.topRightSection{
+    width: 30vw;
+    padding: 20px;
+    background-color: hsl(240, 100%, 5%);
+    color: white;
+    cursor: pointer;
+}
+hr{
+    color: hsl(233, 8%, 79%);
+    opacity: 0.5;
+}
+.BnewsSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+}
+.topRightSection h1{
+    color: hsl(35, 77%, 62%);
+    padding-bottom: 20px;
+}
+.BrakingNews h3:hover{
+    color: hsl(35, 77%, 62%);
+    transition: all 0.5s ease;
+}
+.bottomSection{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.news{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 30%;
+}
+.news img{
+    width: 150px;
+}
+.newsData{
+    width: 55%;
+}
+.newsData h1{
+    color: hsl(233, 8%, 79%);
+}
+.newsData h3{
+    color: hsl(240, 100%, 5%);
+    font-size: 16px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.newsData h3:hover{
+    color: hsl(5, 85%, 63%);
+    transition: all 0.5s ease-out;
+}
+.newsData p{
+    color: hsl(240, 100%, 5%);
+    font-size: 14px;
+}
+
+footer{
+    text-align: center;
+    margin-top: 20px;
+}
+footer a{
+    text-decoration: none;
+    color: hsl(5, 85%, 63%);
+}
+
+@media (max-width:768px) {
+    body{
+        align-items: center;
+        padding: 0px;
+    }
+    .menubutton{
+        display: block;
+    }
+    nav{
+        z-index: 1;
+        background-color: white;
+        width: 100vw;
+    }
+    nav ul{
+        display: none;
+    }
+    .responsiveMenu{
+        display: block;
+        /* transform: translateY(-400px); */
+        margin-top: -290px;
+    }
+    .responsiveMenuAction{
+        display: block;
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        background-color: rgb(0,0,26);
+        list-style: none;
+        /* transform: translateY(0px); */
+        margin-top: 0px;
+        transition: all 0.5s ease-out;
+    }
+    .responsiveMenu li:hover{
+        color: hsl(5, 85%, 63%);
+        transition: color 0.5s ease-out;
+    }
+    .TopLeeft{
+        width: 85vw;
+    }
+    .desktopImg{
+        display: none;
+    }
+    .MobileImg{
+        display: block;
+        width: 100%;
+    }
+    .topLefBottomSection{
+        flex-direction: column;
+    }
+    .responsiveMenu li{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .topSection{
+        display: block;
+    }
+    .bottomSection{
+        display: block;
+    }
+    .topRightSection{
+        width: 100%;
+    }
+    .BrakingNews{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .news{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .news img{
+        width:40%;
+    }
+    .newsData h3{
+        font-size: 14px;
+    }
+    .newsData p{
+        font-size: 12px;
+    }
+}
